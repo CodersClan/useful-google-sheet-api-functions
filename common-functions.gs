@@ -12,7 +12,7 @@ function vlookup(sheet, column, index, value) {
   var data=sheet.getRange(1,column,lastRow,column+index).getValues();
   
   for(i=0;i<data.length;++i){
-    if (data[i][1]==value){
+    if (data[i][0]==value){
       return data[i][index];
     }
   }
